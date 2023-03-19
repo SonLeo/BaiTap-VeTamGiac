@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vẽ tam giác</title>
+</head>
+<body>
+    <div style="display: flex; justify-content: space-around;">
+        <div id="mau-1"></div>
+        <div id="mau-2"></div>
+        <div id="mau-3"></div>
+        <div id="mau-4"></div>
+    </div>
+
+    <script>
+        let triangle1 = "";
+        let triangle2 = "";
+
+        // Mẫu 1 + 3
+        for (let i = 0; i < 4; i++) {
+            for (let j = 0; j <= i; j++) {
+                triangle1 += "*";
+            }
+            triangle1 += "<br>";
+        }
+        
+        // Mẫu 2 + 4
+        for (let i = 0; i < 4; i++) {
+            for (let j = 4-i; j > 0; j--) {
+                triangle2 += "*";
+            }
+            triangle2 += "<br>";
+        }
+
+        document.getElementById("mau-1").innerHTML = triangle1 + "<p style='text-align: center'>Mẫu 1</p>";
+        document.getElementById("mau-2").innerHTML = triangle2 + "<p style='text-align: center'>Mẫu 2</p>";
+        document.getElementById("mau-3").style = "text-align: right"
+        document.getElementById("mau-3").innerHTML = triangle1 + "<p style='text-align: center'>Mẫu 3</p>";
+        document.getElementById("mau-4").style = "text-align: right"
+        document.getElementById("mau-4").innerHTML = triangle2 + "<p style='text-align: center'>Mẫu 4</p>";
+    </script>
+</body>
+</html>
